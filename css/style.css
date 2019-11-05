@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+	letter-spacing: 1px;
+	font-family: 'Roboto', sans-serif;
+}
+
+#container{
+	margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.form-style{
+  width: 350px;
+  padding: 20px;
+  background:#222;
+  color: white;
+  border-radius: 10px;
+  font-size: .9rem;
+}
+
+#first-set, #second-set{
+  padding-top: 2%;
+}
+
+fieldset:nth-of-type(2),fieldset:nth-of-type(3){
+margin-top: 10px;
+}
+
+legend{
+	color:	#7CFC00;
+	padding: 0 3px;
+}
+
+span{
+  padding: 3px 10px;
+  color: #FF9999;
+  font-size: .7rem;
+  font-style: italic;
+}
+
+.set-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.set-container{
+  display: flex;
+  width: 96%;
+  justify-content: space-between;
+  margin-bottom: 5px;
+   border-radius: 10px;
+}
+
+.set-container label{
+  margin-right: 3px;
+  align-self: center;
+  margin-left: 5px;
+ 
+}
+
+
+.set-container select, .set-container input{
+  width: 70%;
+  padding: 5px 3px;
+  border-radius: 10px;
+}
+
+#third-set legend{
+	margin-bottom: 5px;
+
+
+
+}
+
+#progress-box h6{
+	color: #7CFC00;
+}
+
+#progress-bar-outer{
+	width: 200px;
+	height: 20px;
+	position: relative;
+	border: solid 2px black;
+	background: white;
+	margin-bottom: 5px;
+}
+
+#progress-bar-inner{
+	position: absolute;
+	height: 100%;
+  background: #7cfc00;
+  width: 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+
+.animate1{
+  animation-name: progress1;
+}
+
+.animate2{
+  animation-name: progress2;
+}
+
+.animate3{
+  animation-name: progress3;
+}
+
+.animate1, .animate2, .animate3{
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+
+@keyframes progress1{
+  from {width: 0;}
+  to {width: 10%;}
+}
+@keyframes progress2{
+  from {width: 0;}
+  to {width: 50%;}
+}
+
+@keyframes progress3{
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+
+	

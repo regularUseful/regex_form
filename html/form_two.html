@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Form</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/datepickr.css"/>
+	<script src="../javascript/datepickr.js"></script>
+
+</head>
+<body>
+<div id="container">
+  <form name="contact" action="../PHP/FormToEmail.php" class="form-style"  method="post" novalidate>
+  <div id="progress-box">
+<h6>Progress</h6>
+<div id="progress-bar-outer">
+	<div id="progress-bar-inner" class="animate2">
+	</div>
+</div>
+</div>
+    <fieldset id="first-set">
+      <legend>Enter Tip Details</legend>
+     <div class="set-flex">
+	 <div class="set-container"> <label for="datepick">Date/Time of incident: </label><input  id="datepick" type="text" name="Incident" placeholder="DD/MM/YY" required>
+    <script type="text/javascript">
+    var i = document.createElement("input");
+    i.setAttribute("type", "datetime-local");
+    if (i.type != " datetime-local ")
+    {
+    new datepickr('datepick', {'dateFormat': 'd/m/y'});
+    }
+    </script>
+        </div>
+	  <div class="set-container"> <label for="details">Tip details: </label><textarea style="resize: none;" rows="10" placeholder="Enter some details" id="details"></textarea>
+        
+        </div>
+			  <div class="set-container"> <label for="file">Attach file: </label><input type="file"  id="file">
+        
+        </div>
+	  <div class="set-container"> <label for="urgency">Urgency: </label><input id="urgency" type="range" min="0" max="100" >
+        
+        </div>
+	 
+	 
+	 
+	 </div>
+    </fieldset>
+      <fieldset id="second-set">
+      <legend>Comunication preferences</legend>
+	       <div class="set-flex">
+				<div class="set-container"> <label for="contact">May we contact you about this tip? </label><input type="checkbox" id="contact">
+        
+        </div>
+	 
+	 </div>
+     
+    </fieldset>
+	 <fieldset id="third-set">
+      <legend>Prefered contact method</legend>
+	       <div class="set-flex">
+				<div class="set-container"> <label for="phone">Phone: </label><input type="radio" id="phone" name="contact-method">
+        
+        </div>
+		<div class="set-container"> <label for="email">Email: </label><input type="radio" id="email" name="contact-method">
+        
+        </div>
+	 
+	 </div>
+     
+    </fieldset>
+    <input  type="Submit" value="Submit">
+  </form>
+  
+  
+</div>	
+
+</body>
+</html>
